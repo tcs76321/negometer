@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Inter:wght@500&family=Roboto:ital,wght@1,700&display=swap');
+
+body {
+    font-family: 'Fira Sans', sans-serif;
+    background-color: whitesmoke;
+    color: #863fcc;
+    text-align: center;
+    /*border: 10px solid purple;*/
+}
+
+h1 {
+    border-bottom: 4px solid #863fcc;
+}
+
+p {
+    font-size: large;
+}
+
+a {
+    padding: 20px;
+    color: inherit;
+}
+
+a:hover {
+    color: black;
+}
