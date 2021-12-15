@@ -9,5 +9,5 @@ def index(request):
     return render(request, 'index.html', context)
 
 
-def detail(request, outlet):
-    return HttpResponse("You're looking at outlet %s." % outlet)
+def detail(request, tag):
+    return HttpResponse("You're looking at %s." % tag)
