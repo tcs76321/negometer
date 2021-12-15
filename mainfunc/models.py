@@ -5,6 +5,7 @@ from django.db import models
 
 class NewsOutlet(models.Model):
     name = models.CharField(max_length=32)
+    tag = models.CharField(max_length=32, null=True)
     link_to = models.URLField()
     rss_source = models.URLField(default=None, blank=True, null=True)
     # stats
