@@ -1,6 +1,8 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 from django.shortcuts import render
 from django.template import loader
+
+from mainfunc.models import NewsOutlet
 
 
 def index(request):
@@ -10,4 +12,8 @@ def index(request):
 
 
 def detail(request, tag):
-    return HttpResponse("You're looking at %s." % tag)
+    try:
+        outlet = NewsOutlet.objects.get(tag=tag)
+    except NewsOutlet.DoesNotExist:
+        raise Http404("News Outlet does not exist")
+    return render(request, '../templates/detail.html', {'outlet': outlet})
