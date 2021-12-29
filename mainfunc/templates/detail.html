@@ -4,19 +4,27 @@
 
     <h2 style="font-size: 320%">{{ outlet.name }}</h2>
 
-    <img src="../../static/images/{{ outlet.tag }}Logo.jpeg" alt="LOGO">
+    <img src="../../static/images/{{ outlet.tag }}Logo.jpeg" alt="LOGO" height="80px">
 
     <h2 style="border-bottom: 2px solid #863fcc; text-align: left; padding-left: 8%;">Summary</h2>
 
-    <h3>Overall Score: </h3>
+    <div style="display: flex;">
+        <div style="width: 33%"><h3>Overall Score: 99/100</h3><p>*Higher is Worse*</p></div>
+        <div style="width: 33%"><h3>Average Volume: 8319 AWP Per Day</h3><p>AWP: article/word points</p><p><i>coming soon, <br>this information will be available with an upcoming site update</i></p></div>
+        <div style="width: 33%"><h3>Top Themes:</h3><p><i>coming soon, <br>this information will be available with an upcoming site update</i></p></div>
+    </div>
 
     <br><br>
 
-    <h2 style="border-bottom: 2px solid #863fcc; text-align: left; padding-left: 8%;">Yesterday's Stats</h2>
-
-    <br><br>
+{#    <h2 style="border-bottom: 2px solid #863fcc; text-align: left; padding-left: 8%;">Yesterday's Stats</h2>#}
+{##}
+{#    <br><br>#}
 
     <h2 style="border-bottom: 2px solid #863fcc; text-align: left; padding-left: 8%;">Misc Info</h2>
-    <p>Link:<a href="{{ outlet.link_to }}">{{ outlet.link_to }}</a>RSS Feed: {{ outlet.rss_source }}</p>
+    <div style="display: flex;">
+        <div style="width: 33%"><p><b>Link:</b><a href="{{ outlet.link_to }}">{{ outlet.link_to }}</a></p></div>
+        <div style="width: 33%"><p><b>RSS Feed:</b> {{ outlet.rss_source }}</p></div>
+        <div style="width: 33%"><p><b>Prominent Supporters:</b></p><p><i>coming soon, <br>this information will be available with an upcoming site update</i></p></div>
+    </div>
 
 {% endblock %}
