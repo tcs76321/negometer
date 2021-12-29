@@ -17,3 +17,21 @@ def detail(request, tag):
     except NewsOutlet.DoesNotExist:
         raise Http404("News Outlet does not exist")
     return render(request, '../templates/detail.html', {'outlet': outlet})
+
+
+def info(request):
+    context = {
+    }
+    return render(request, 'info.html', context)
+
+
+def support(request):
+    context = {
+    }
+    return render(request, 'support.html', context)
+
+
+def contact(request):
+    context = {
+    }
+    return render(request, 'contact.html', context)
