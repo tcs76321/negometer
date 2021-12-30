@@ -4,7 +4,8 @@
 
     <h2 style="font-size: 320%">{{ outlet.name }}</h2>
 
-    <img src="../../static/images/{{ outlet.tag }}Logo.jpeg" alt="LOGO" height="80px">
+    {% load static %}
+    <img src="{% static 'images/'%}{{ outlet.tag }}Logo.jpeg" alt="LOGO" height="80px">
 
     <h2 style="border-bottom: 2px solid #863fcc; text-align: left; padding-left: 8%;">Summary</h2>
 
@@ -15,10 +16,6 @@
     </div>
 
     <br><br>
-
-{#    <h2 style="border-bottom: 2px solid #863fcc; text-align: left; padding-left: 8%;">Yesterday's Stats</h2>#}
-{##}
-{#    <br><br>#}
 
     <h2 style="border-bottom: 2px solid #863fcc; text-align: left; padding-left: 8%;">Misc Info</h2>
     <div style="display: flex;">
