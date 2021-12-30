@@ -1,6 +1,5 @@
 from django.http import HttpResponse, Http404
 from django.shortcuts import render
-# import os
 
 from mainfunc.models import NewsOutlet
 
@@ -38,7 +37,6 @@ def contact(request):
 
 
 def robots(request):
-    # print(os.getcwd())
-    file1 = open("mainfunc/templates/robots.txt", 'r')
+    file1 = open("robots.txt", 'r')
     robots_text = file1.read()
     return HttpResponse(content=robots_text, content_type='text/plain')
