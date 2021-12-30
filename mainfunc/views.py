@@ -40,3 +40,9 @@ def robots(request):
     file1 = open("robots.txt", 'r')
     robots_text = file1.read()
     return HttpResponse(content=robots_text, content_type='text/plain; charset=utf-8')
+
+
+def sitemap(request):
+    file1 = open("sitemap.txt", 'r')
+    text1 = file1.read()
+    return HttpResponse(content=text1, content_type='text/plain; charset=utf-8')
