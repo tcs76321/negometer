@@ -39,4 +39,4 @@ def contact(request):
 def robots(request):
     file1 = open("robots.txt", 'r')
     robots_text = file1.read()
-    return HttpResponse(content=robots_text, content_type='text/plain')
+    return HttpResponse(content=robots_text, content_type='text/plain; charset=utf-8')
