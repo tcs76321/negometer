@@ -25,9 +25,9 @@
 </head>
 
 <body>
-    <div class="container-fluid p-5">
+    <div class="container-fluid py-5">
         <nav class="navbar navbar-expand-md bg-dark fixed-top">
-          <a class="navbar-brand" href="https://negometer.com/">Negometer</a>
+          <a class="navbar-brand" href="https://negometer.com/">Negometer.com</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -47,9 +47,22 @@
 {#          </div>#}
         </nav>
 
-        {% block content %}{% endblock %}
+        <div class="container-fluid p-2">
+{#            <span class="border border-white border-5">#}
+                {% block content %}{% endblock %}
+{#            </span>#}
+        </div>
+    </div>
+    <div class="container-fluid">
+      <footer class="my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item py-2"><a href="/info" style="font-size: larger">Learn More</a></li>
+            <li class="nav-item py-2"><a href="/support" style="font-size: larger">Support Negometer</a></li>
+            <li class="nav-item py-2"><a href="/contact" style="font-size: larger">Contact Us</a></li>
+        </ul>
+        <p class="text-center text-muted">Copyright © 2022</p>
+      </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
-<h6>Copyright &copy; 2021-2022</h6>
 </html>

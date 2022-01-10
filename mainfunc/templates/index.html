@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1 style="font-size: 400%">Neg-O-Meter</h1>
+    <h1>Neg-O-Meter</h1>
 
-    <h2>Tracking the Sources of Negativity</h2>
+    <h3>Tracking the Sources of Negativity</h3>
     <br>
 
     <p>The media, in tandem with other institutions, is highly incentivized to induce various degrees of panic in their
@@ -19,7 +19,7 @@
 
     <br><br><br>
 
-    <p style="font-size: 200%; color:#863fcc">Currently we have statistics on the following news outlets for viewing:</p>
+    <h3><u>Currently we have ratings on the following news outlets for viewing:</u></h3>
 
     {% load static %}
     <a href="/details/abc" style="font-size: 300%;"><div><div><img src="{% static 'images/abcLogo.jpeg' %}" style="width:80px;height:80px;" alt="ABC Logo"></div><div>ABC News</div></div></a>
@@ -28,11 +28,5 @@
     <a href="/details/fox" style="font-size: 300%;"><div><div><img src="{% static 'images/foxLogo.jpeg' %}" style="width:80px;height:80px;" alt="Fox News Logo"></div><div>Fox News</div></div></a>
     <a href="/details/nbc" style="font-size: 300%;"><div><div><img src="{% static 'images/nbcLogo.jpeg' %}" style="width:160px;height:80px;" alt="NBC Logo"></div><div>NBC News</div></div></a>
 
-    <br><br><br><br><br><br>
-
-    <a href="/info" style="font-size: larger">Learn More</a>
-    <a href="/support" style="font-size: larger">Support Negometer</a>
-    <a href="/contact" style="font-size: larger">Contact Us</a>
-
-    <br><br><br>
+    <br>
 {% endblock %}
