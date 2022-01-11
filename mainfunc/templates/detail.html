@@ -1,31 +1,54 @@
 {% extends "base.html" %}
 
 {% block content %}
-
     <h2 style="font-size: 320%">{{ outlet.name }}</h2>
 
     {% load static %}
     <img src="{% static 'images/'%}{{ outlet.tag }}Logo.jpeg" alt="LOGO" height="80px">
 
-    <h2 style="border-bottom: 2px solid #863fcc; text-align: left; padding-left: 8%;">Summary</h2>
+    <br><br>
 
-    <div style="display: flex;">
-        <div style="width: 33%"><h3>Overall Score: {{ outlet.day_score }}</h3><p>*Higher is Worse*<br>more negative</p></div>
-        <div style="width: 33%"><h3>Average Volume: ---- AWP Per Day</h3><p>AWP: article/word points</p><p style="color:darkgrey"><i>coming soon, <br>this information will be available with an upcoming site update</i></p></div>
-        <div style="width: 33%"><h3>Top Themes:</h3><p style="color:darkgrey"><i>coming soon, <br>this information will be available with an upcoming site update</i></p></div>
+    <h2 style="border-bottom: 2px solid #863fcc; text-align: left; padding-left: 8%;">Summary:</h2>
+    <div class="row g-5">
+        <div class="col-md-4">
+            <h3>Overall Score: {{ outlet.day_score }} Negs</h3>
+            <p"color:darkgrey">*higher is more negative*</p>
+        </div>
+        <div class="col-md-4">
+            <h3>Average Volume: ---- AWP Per Day</h3>
+            <p>AWP: article/word points</p>
+            <p style="color:darkgrey"><i>coming soon, <br>this information will be available with an upcoming site update</i></p>
+        </div>
+        <div class="col-md-4">
+            <h3>Top Themes:</h3>
+            <p style="color:darkgrey"><i>coming soon, <br>this information will be available with an upcoming site update</i></p>
+        </div>
+
+        <h2 style="border-bottom: 2px solid #863fcc; text-align: left; padding-left: 8%;">Misc Info:</h2>
+        <div class="col-md-4">
+            <h3><b>Link:</b><a href="{{ outlet.link_to }}">{{ outlet.link_to }}</a></h3>
+        </div>
+        <div class="col-md-4">
+            <h3><b>RSS Feed:</b>{{ outlet.rss_source }}</h3>
+        </div>
+        <div class="col-md-4">
+            <h3><b>Prominent Supporters:</b></h3>
+            <p style="color:darkgrey"><i>coming soon, <br>this information will be available with an upcoming site update</i></p>
+        </div>
     </div>
 
     <br><br>
 
-    <h2 style="border-bottom: 2px solid #863fcc; text-align: left; padding-left: 8%;">Misc Info</h2>
-    <div style="display: flex;">
-        <div style="width: 33%"><h3><b>Link:</b><a href="{{ outlet.link_to }}">{{ outlet.link_to }}</a></h3></div>
-        <div style="width: 33%"><h3><b>RSS Feed:</b> <br>{{ outlet.rss_source }}</h3></div>
-        <div style="width: 33%"><h3><b>Prominent Supporters:</b></h3><p style="color:darkgrey"><i>coming soon, <br>this information will be available with an upcoming site update</i></p></div>
-    </div>
-
-    <h4>This is essentially an alpha/beta version of the envisioned functionality of Negometer.<br>The score is based on
-        limited data from a single point in time on a day in late December 2021 which was crudely analyzed in comparison
-        to what the Negometer team envisions for the future.<br>We hope you return soon to see how we evolve the site.</h4>
+    <h4>
+        This is essentially an alpha/beta version of the envisioned functionality of Negometer.
+    </h4>
+    <h4>
+        The score is based on limited data from a single point in time on a day in late December 2021 which was crudely
+        analyzed in comparison to what the Negometer team envisions for the future.
+    </h4>
+    <br>
+    <h4>
+        We hope you return soon to see how we evolve the site.
+    </h4>
 
 {% endblock %}
