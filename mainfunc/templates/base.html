@@ -28,32 +28,54 @@
 
 <body>
     <div class="container-fluid py-5">
-        <nav class="navbar navbar-expand-md bg-dark fixed-top">
-            <a class="navbar-brand" href="https://negometer.com/">Negometer.com</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <svg color="#863fcc" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
-                                <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
-                            </svg>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li><a href="/info">Learn More</a></li>
-                            <br>
-                            <li><a href="/support">Support Us</a></li>
-                            <br>
-                            <li><a href="/contact">Contact Us</a></li>
+        <nav class="navbar navbar-expand bg-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="https://negometer.com/">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+                        <i class="bi bi-house-fill"></i>
+                    </svg>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+                <div class="container-fluid">
+                    <span class="navbar-text">
+                        <h3>Neg-O-Meter</h3>
+                    </span>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+    {#                ms-auto is key here#}
+                    <div class="container-fluid">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <svg xmlns="http://www.w3.org/2000/svg" color="#863fcc" width="24" height="24" fill="currentColor" class="bi bi-justify" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+                                    </svg>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                                    <li><a href="/">Home Page</a></li>
+                                    <br>
+                                    <li><a href="/info">Learn More</a></li>
+                                    <br>
+                                    <li><a href="/support">Support Us</a></li>
+                                    <br>
+                                    <li><a href="/contact">Contact Us</a></li>
+                                    <br>
+                                    <li><a href="/privacy">Privacy Policy</a></li>
+                                </ul>
+                            </li>
                         </ul>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
         </nav>
 
         <div class="container-fluid p-2">
+        <br>
                 {% block content %}{% endblock %}
         </div>
 
@@ -64,10 +86,12 @@
             <li class="nav-item py-1"><a href="/info" style="font-size: larger">Learn More</a></li>
             <li class="nav-item py-1"><a href="/support" style="font-size: larger">Support Negometer</a></li>
             <li class="nav-item py-1"><a href="/contact" style="font-size: larger">Contact Us</a></li>
+            <li class="nav-item py-1"><a href="/privacy" style="font-size: larger">Privacy Policy</a></li>
         </ul>
         <p class="text-center text-muted">Copyright © 2021-2022</p>
       </footer>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

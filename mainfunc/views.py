@@ -46,3 +46,9 @@ def sitemap(request):
     file1 = open("sitemap.txt", 'r')
     text1 = file1.read()
     return HttpResponse(content=text1, content_type='text/plain; charset=utf-8')
+
+
+def privacy(request):
+    context = {
+    }
+    return render(request, 'privacy.html', context)

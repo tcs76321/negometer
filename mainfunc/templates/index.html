@@ -1,9 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Neg-O-Meter</h1>
-
-    <h3>Tracking the Sources of Negativity</h3>
+    <h1>Tracking the Sources of Negativity</h1>
     <br>
 
     <p>The media, in tandem with other institutions, is highly incentivized to induce various degrees of panic in their
@@ -19,10 +17,10 @@
 
     <br><br><br>
 
-    <h3><u>Currently we have ratings on the following news outlets for viewing:</u></h3>
+    <h3>Currently we have ratings on the following news outlets for viewing:</h3>
 
     {% load static %}
-    <a href="/details/abc" style="font-size: 300%;"><div><div><img src="{% static 'images/abcLogo.jpeg' %}" style="width:80px;height:80px;" alt="ABC Logo"></div><div>ABC News</div></div></a>
+    <a href="/details/abc" style="font-size: 300%;"><div><div><img src="{% static 'images/abcLogo.jpeg' %}" style="width:80px;height:80px;" alt="ABC Logo"></div><div class="mainLinks">ABC News</div></div></a>
     <a href="/details/cbs" style="font-size: 300%;"><div><div><img src="{% static 'images/cbsLogo.jpeg' %}" style="width:80px;height:80px;" alt="CBS Logo"></div><div>CBS News</div></div></a>
     <a href="/details/cnn" style="font-size: 300%;"><div><div><img src="{% static 'images/cnnLogo.jpeg' %}" style="width:80px;height:80px;" alt="CNN Logo"></div><div>CNN</div></div></a>
     <a href="/details/fox" style="font-size: 300%;"><div><div><img src="{% static 'images/foxLogo.jpeg' %}" style="width:80px;height:80px;" alt="Fox News Logo"></div><div>Fox News</div></div></a>
