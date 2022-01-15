@@ -1,54 +1,56 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h2 style="font-size: 320%">{{ outlet.name }}</h2>
+    <h2 style="font-size: 320%"><b>{{ outlet.name }}</b></h2>
 
     {% load static %}
     <img src="{% static 'images/'%}{{ outlet.tag }}Logo.jpeg" alt="LOGO" height="80px">
 
     <br><br>
 
-    <h2 style="border-bottom: 2px solid #863fcc; text-align: left; padding-left: 8%;">Summary:</h2>
+    <h1 style="border-bottom: 2px solid #863fcc; text-align: left; padding-left: 4%;"><b>Summary:</b></h1>
     <div class="row g-5">
         <div class="col-md-4">
-            <h3>Overall Score: {{ outlet.day_score }} Negs</h3>
-            <p"color:darkgrey">*higher is more negative*</p>
+            <br>
+            <h3>Today's Negativity:</h3>
+            <h4>{{ outlet.day_score }} Negs</h4>
+            <p style="color: #5c5a5e">*higher is more negative*</p>
         </div>
         <div class="col-md-4">
-            <h3>Average Volume: ---- AWP Per Day</h3>
-            <p>AWP: article/word points</p>
-            <p style="color:darkgrey"><i>coming soon, <br>this information will be available with an upcoming site update</i></p>
+            <br>
+            <h3>Average Negativity:</h3>
+            <h4>{{ outlet.month_score }} Negs</h4>
+            <p style="color: #5c5a5e">*30-day running average*</p>
         </div>
         <div class="col-md-4">
+            <br>
             <h3>Top Themes:</h3>
-            <p style="color:darkgrey"><i>coming soon, <br>this information will be available with an upcoming site update</i></p>
+            <h4>Hate, Crime, Riots</h4>
+            <p style="color: #5c5a5e">*most common keywords*</p>
+        </div>
+    </div>
+
+    <br><br><br><br>
+
+    <h1 style="border-bottom: 2px solid #863fcc; text-align: left; padding-left: 4%;"><b>Misc Info:</b></h1>
+    <div class="row g-5">
+        <div class="col-md-4">
+            <a href="{{ outlet.link_to }}"><h4><u>Link To Website</u></h4></a>
         </div>
 
-        <h2 style="border-bottom: 2px solid #863fcc; text-align: left; padding-left: 8%;">Misc Info:</h2>
         <div class="col-md-4">
-            <h3><b>Link:</b><a href="{{ outlet.link_to }}">{{ outlet.link_to }}</a></h3>
+            {% if outlet.rss_source %}
+                <a href="{{ outlet.rss_source }}"><h4><u>RSS Feed Link</u></h4></a>
+            {% endif %}
         </div>
+
         <div class="col-md-4">
-            <h3><b>RSS Feed:</b>{{ outlet.rss_source }}</h3>
-        </div>
-        <div class="col-md-4">
-            <h3><b>Prominent Supporters:</b></h3>
-            <p style="color:darkgrey"><i>coming soon, <br>this information will be available with an upcoming site update</i></p>
+            <br>
+            <h4>Prominent Advertiser(s):</h4>
+            <p>{{ outlet.advertiser }}</p>
         </div>
     </div>
 
     <br><br>
-
-    <h4>
-        This is essentially an alpha/beta version of the envisioned functionality of Negometer.
-    </h4>
-    <h4>
-        The score is based on limited data from a single point in time on a day in late December 2021 which was crudely
-        analyzed in comparison to what the Negometer team envisions for the future.
-    </h4>
-    <br>
-    <h4>
-        We hope you return soon to see how we evolve the site.
-    </h4>
 
 {% endblock %}
