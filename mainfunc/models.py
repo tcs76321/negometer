@@ -30,8 +30,8 @@ class NewsOutlet(models.Model):
     advertiser = models.CharField(max_length=32,default=None, blank=True, null=True)
     # themes
     theme1 = models.IntegerField(default=None, blank=True, null=True)
-    theme1 = models.IntegerField(default=None, blank=True, null=True)
-    theme1 = models.IntegerField(default=None, blank=True, null=True)
+    theme2 = models.IntegerField(default=None, blank=True, null=True)
+    theme3 = models.IntegerField(default=None, blank=True, null=True)
 
     def __str__(self):
         return self.name
