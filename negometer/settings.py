@@ -59,8 +59,7 @@ ROOT_URLCONF = 'negometer.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'mainfunc/templates']
-        ,
+        'DIRS': [BASE_DIR / 'mainfunc/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
